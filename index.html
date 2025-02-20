@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro VUE</title>
+    <title>Document</title>
 </head>
 
 <body>
-    
-<h2>Introdución a VUE</h2>
 
-<div id="myApp"></div>
+    <div id="myApp">
+        <h1>Batman quotes {{sumaSententias}}</h1>
+        <button v-on:click="vectisAuctor">Toggle autor</button>
+        <!-- 
+        <button @:click="vectisAuctor">Toggle autor</button> 
+        También se puede escribir así. v-on:click es lo mismo que @:click -->
+        
+        <!--
+        <button @:click="addereSententia">Add quotes</button>
+        -->
+
+        &nbsp; &nbsp;
+         
+        <input 
+            type="text"
+            placeholder="Add quote"
+            @keypress.enter="addereSententia"
+            v-model="nuntiusNovus"
+        
+        >
+
+
+        <hr>
+
+        <ul>
+            <li v-for="{sententia, auctor}, index in sententiae">
+                <span>{{index + 1}} - {{sententia}}</span>
+
+                <blockquote v-if="revelareAuctor">{{auctor}}</blockquote>
+        
+            </li>
+
+        </ul>
+    </div>
+
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
