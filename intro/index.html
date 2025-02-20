@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro VUE</title>
+</head>
+
+<body>
+    
+<h2>Introdución a VUE</h2>
+<h6>Se inicia en ver -> paleta de comandos -> Live Server: Open with live server</h6>
+
+<div id="myApp">
+
+    <h3>{{nuntius}}</h3>
+    <blockquote>{{auctor}}</blockquote>
+
+    <button v-on:click="mutareSententia">Cambiar mensaje</button>
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
